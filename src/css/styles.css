@@ -229,17 +229,16 @@ button {
   }
 
   .menu > .menu-items {
-
     height: auto;
     flex-direction: row;
   }
 
   .menu-items > li {
-      padding: 1em 0.75em;
-      font-size: 1.25rem;
+    padding: 1em 0.75em;
+    font-size: 1.25rem;
   }
   .menu-items > li > a {
-      color: var(--primary-text-color);
+    color: var(--primary-text-color);
   }
 }
 
@@ -274,6 +273,7 @@ button {
 
 .learn-more {
   color: var(--secondary-text-color);
+  margin-left: 1rem;
 }
 
 /* product features section */
@@ -289,6 +289,16 @@ button {
   margin: 0 auto;
   padding: 0.75em;
   color: var(--primary-text-color-300);
+}
+
+.feature-image {
+  margin-bottom: 1rem;
+  padding: 0.75em 0.5em;
+}
+
+.feature-image > i {
+  font-size: var(--fs-600);
+  color: var(--primary-color-300);
 }
 
 .feature-card {
@@ -336,7 +346,7 @@ button {
 }
 
 .btn.secondary-cta {
-  margin:1em 0 1em 1em;
+  margin: 1em 0 1em 1em;
   background-color: hsl(24, 100%, 68%);
   color: var(--primary-text-color);
 }
@@ -478,7 +488,7 @@ input[type="email"]:focus {
 }
 
 .btn.subscribe {
-  margin:0 0 0.75em 0.75em;
+  margin: 0 0 0.75em 0.75em;
   background: var(--primary-color-400);
   color: var(--primary-text-color);
 }
@@ -517,6 +527,18 @@ footer a {
 }
 
 @media (min-width: 50rem) {
+  .features-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1.5rem 0.75rem;
+  }
+
+  .feature-detail {
+    padding: 1em 0.75em;
+    line-height: 1.6;
+  }
+
   .testimonial-card {
     display: flex;
     gap: 0.5rem 0.75rem;
@@ -529,7 +551,8 @@ footer a {
   }
 
   .testimonial > p {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.7;
   }
 
   .secondary-cta-container {
@@ -554,4 +577,31 @@ footer a {
   .socials {
     margin-top: 1em;
   }
+}
+
+@media (min-width:65px) {
+
+  .features-container {
+/*     
+     display: grid;
+    gap: 1rem; */
+    grid-template-columns:1fr 1fr;
+    padding: 1.5rem 0.75rem; 
+  }
+
+  .feature-detail {
+    padding: 1em 0.75em;
+    font-weight: bolder;
+    line-height: 1.6;
+  }
+
+  .inverse {
+    flex-direction: row-reverse;
+  }
+
+  .testimonial > p {
+    font-size: inherit;
+    line-height: 1.7;
+  }
+
 }
